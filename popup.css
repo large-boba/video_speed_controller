@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  width: 280px;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #a6adc8;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.speed-display {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #89b4fa;
+  margin-bottom: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.speed-display .x {
+  font-size: 20px;
+  color: #6c7086;
+  margin-left: 2px;
+}
+
+#speed-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #313244;
+  outline: none;
+  cursor: pointer;
+}
+
+#speed-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #89b4fa;
+  cursor: pointer;
+  border: 2px solid #1e1e2e;
+  transition: transform 0.1s ease;
+}
+
+#speed-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+#speed-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #89b4fa;
+  cursor: pointer;
+  border: 2px solid #1e1e2e;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6c7086;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.presets {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.preset {
+  background: #313244;
+  color: #cdd6f4;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.preset:hover {
+  background: #45475a;
+}
+
+.preset.active {
+  background: #89b4fa;
+  color: #1e1e2e;
+}
+
+.reset {
+  width: 100%;
+  background: transparent;
+  color: #f38ba8;
+  border: 1px solid #45475a;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.reset:hover {
+  background: #313244;
+}
+
+.status {
+  text-align: center;
+  font-size: 11px;
+  color: #6c7086;
+  margin-top: 10px;
+  min-height: 14px;
+}
